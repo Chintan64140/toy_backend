@@ -11,7 +11,8 @@
     "migrate": "npx prisma migrate dev --name init",
     "generate": "npx prisma generate",
     "vercel-build": "prisma generate",
-    "seed": "npx prisma db seed"
+    "seed": "npx prisma db seed",
+    "postinstall": "prisma generate"
   },
   "keywords": [
     "jewelry",
