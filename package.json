@@ -6,10 +6,11 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/app.js",
-    "build": "tsc",
-    "start": "node dist/app.js",
+    "start": "node src/app.js",
+    "build": "prisma generate",
     "migrate": "npx prisma migrate dev --name init",
     "generate": "npx prisma generate",
+    "vercel-build": "prisma generate",
     "seed": "npx prisma db seed"
   },
   "keywords": [
