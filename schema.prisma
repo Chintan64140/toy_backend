@@ -1,0 +1,32 @@
+// schema.prisma
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  email    String    @unique
+  name     String?
+  products Product[]
+}
+
+model Product {
+  id          Int     @id @default(autoincrement())
+  name        String
+  productType String
+  createdBy   User    @relation(fields: [userId], references: [id])
+  userId      Int
+  image       String?
+}
+
+model Image {
+  id        String   @id @default(uuid())
+  url       String   @default("")
+  createdAt DateTime @default(now())
+}
