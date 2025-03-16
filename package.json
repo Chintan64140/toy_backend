@@ -7,12 +7,12 @@
   "scripts": {
     "dev": "nodemon src/app.js",
     "start": "node src/app.js",
-    "build": "npx prisma migrate npx prisma generate",
+    "build": "npx prisma generate && prisma migrate",
     "migrate": "npx prisma migrate dev --name init",
     "generate": "npx prisma generate",
     "vercel-build": "prisma generate",
     "seed": "npx prisma db seed",
-    "postinstall": "npx prisma migrate npx prisma generate"
+    "postinstall": "npx prisma generate && prisma migrate"
   },
   "keywords": [
     "jewelry",
