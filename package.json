@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon src/app.js",
     "start": "node src/app.js",
-    "build": "npx prisma generate && prisma migrate deploy",
+    "build": "npx prisma generate && prisma migrate reset",
     "migrate": "npx prisma migrate dev --name init",
     "generate": "npx prisma generate",
     "vercel-build": "prisma generate",
