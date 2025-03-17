@@ -7,7 +7,7 @@ export const uploadImage = async (req, res) => {
         if (!req.file) {
             return res.status(400).json({ error: "No file uploaded" });
         }
-
+        
         const file = req.file
 
         const { data, error } = await supabase
