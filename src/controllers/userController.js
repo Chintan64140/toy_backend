@@ -12,6 +12,7 @@ export const getUsers = async (req, res) => {
 };
 
 export const createUser = async (req, res) => {
+  
   const { name, email, password, userName, address, bankAccount } = req.body;
   if (name && email && password && userName && address && bankAccount) {
     const findUser = await prisma.user.findUnique(

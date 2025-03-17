@@ -17,7 +17,7 @@ model User {
   userName    String
   address     String?
   bankAccount String?
-  age         String?
+  
 }
 
 model Product {
