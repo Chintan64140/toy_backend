@@ -12,7 +12,6 @@ app.use("/api/products", productsRouter);
 app.use("/api/file", uploadRouter);
 
 
-
 app.get('/', (req, res) => {
     console.log('IS_____CALLES')
     return res.json({ message: "helloss" })
