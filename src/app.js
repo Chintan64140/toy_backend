@@ -11,9 +11,9 @@ app.use("/api/users", router);
 app.use("/api/products", productsRouter);
 app.use("/api/file", uploadRouter);
 
-app.get('/', (res) => {
+app.get('/', (req, res) => {
     console.log('IS_____CALLES')
-    return res.json("helloss")
+    return res.json({ message: "helloss" })
 })
 
 const PORT = process.env.PORT || 5000;
