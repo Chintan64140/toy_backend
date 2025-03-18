@@ -6,6 +6,7 @@ import uploadRouter from './routes/uploadRoutes.js'
 const app = express();
 app.use(express.json());
 
+
 // app.use("/api/users", router);
 
 // app.use("/api/products", productsRouter);
