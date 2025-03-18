@@ -17,7 +17,6 @@ model User {
   userName    String
   address     String?
   bankAccount String?
-  
 }
 
 model Product {
