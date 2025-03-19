@@ -1,7 +1,7 @@
 import express from "express";
 import router from './routes/userRoutes.js'
 import productsRouter from './routes/productsRoutes.js'
-import uploadRouter from './routes/uploadRoutes.js'
+// import uploadRouter from './routes/uploadRoutes.js'
 
 const app = express();
 app.use(express.json());
