@@ -12,9 +12,9 @@ export const getUsers = async (req, res) => {
 
 export const createUser = async (req, res) => {
   try {
-    const { name, email } = req.body;
+    const { name, email, password, userName, address, bankAccount } = req.body;
     const user = await prisma.user.create({
-      data: { name, email },
+      data: { name, email, password, userName, address, bankAccount },
     });
     res.json(user);
   } catch (error) {
